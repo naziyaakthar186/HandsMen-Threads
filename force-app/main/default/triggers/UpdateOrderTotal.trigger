@@ -1,4 +1,3 @@
-
 trigger UpdateOrderTotal on HandsMen_Order__c (before insert, before update) {
     Set<Id> productIds = new Set<Id>();
 

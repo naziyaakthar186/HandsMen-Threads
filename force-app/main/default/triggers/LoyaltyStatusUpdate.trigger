@@ -1,4 +1,3 @@
-
 trigger LoyaltyStatusUpdate on HandsMen_Customer__c (before insert, before update) {
     for (HandsMen_Customer__c cust : Trigger.new) {
         if (cust.Total_Purchases__c != null) {

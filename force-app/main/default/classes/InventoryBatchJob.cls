@@ -1,4 +1,3 @@
-
 global class InventoryBatchJob implements Database.Batchable<SObject>, Schedulable {
 
     global Database.QueryLocator start(Database.BatchableContext BC) {
@@ -12,7 +11,8 @@ global class InventoryBatchJob implements Database.Batchable<SObject>, Schedulab
             new List<HandsMen_Product__c>();
 
         for (SObject record : records) {
-            HandsMen_Product__c product = (HandsMen_Product__c) record;
+            HandsMen_Product__c product =
+                (HandsMen_Product__c) record;
 
             if (product.Stock_Quantity__c != null) {
                 product.Stock_Quantity__c += 50;

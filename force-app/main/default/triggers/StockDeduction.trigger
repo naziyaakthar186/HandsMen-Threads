@@ -1,4 +1,3 @@
-
 trigger StockDeduction on Inventory__c (before update) {
     for (Inventory__c inv : Trigger.new) {
         if (inv.Stock_Quantity__c != null &&
